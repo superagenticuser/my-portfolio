@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jordan Lee — Front-End Developer portfolio. Clean, modern web experiences built with HTML, CSS and JavaScript." />
+  <title>Jordan Lee — Front-End Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <header class="nav">
+    <a class="logo" href="#top">JL<span class="logo-dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact" class="btn btn-sm">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <p class="hero-kicker reveal">Hello, I'm</p>
+      <h1 class="hero-title reveal">Jordan Lee<br /><span class="gradient-text">Front-End Developer</span></h1>
+      <p class="hero-sub reveal">I design and build fast, accessible, and delightful web experiences. Currently crafting interfaces and shipping pixels in Toronto.</p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn">View my work</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat"><strong>5+</strong><span>Years experience</span></div>
+        <div class="stat"><strong>40+</strong><span>Projects shipped</span></div>
+        <div class="stat"><strong>12</strong><span>Happy clients</span></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <h2 class="section-title reveal">About <span class="gradient-text">me</span></h2>
+      <div class="about-grid">
+        <div class="card reveal">
+          <p>I'm a front-end developer who loves turning ideas into polished, performant websites. My sweet spot is the space between design and engineering — clean code, thoughtful motion, and interfaces that feel effortless.</p>
+          <p>When I'm not shipping, you'll find me sketching UI concepts, contributing to open source, or hunting down the perfect espresso.</p>
+        </div>
+        <div class="card reveal">
+          <h3>What I do</h3>
+          <ul class="check-list">
+            <li>Responsive, mobile-first websites</li>
+            <li>Design systems &amp; component libraries</li>
+            <li>Performance &amp; accessibility audits</li>
+            <li>Landing pages that convert</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <h2 class="section-title reveal">Skills &amp; <span class="gradient-text">toolkit</span></h2>
+      <div class="skills-grid">
+        <div class="card skill-card reveal">
+          <h3>HTML</h3>
+          <div class="meter"><span style="--level: 95%"></span></div>
+          <p>Semantic, accessible markup</p>
+        </div>
+        <div class="card skill-card reveal">
+          <h3>CSS</h3>
+          <div class="meter"><span style="--level: 92%"></span></div>
+          <p>Grid, Flexbox, animations</p>
+        </div>
+        <div class="card skill-card reveal">
+          <h3>JavaScript</h3>
+          <div class="meter"><span style="--level: 88%"></span></div>
+          <p>ES6+, DOM, fetch APIs</p>
+        </div>
+        <div class="card skill-card reveal">
+          <h3>Tooling</h3>
+          <div class="meter"><span style="--level: 80%"></span></div>
+          <p>Git, Netlify, Figma, Vite</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <h2 class="section-title reveal">Selected <span class="gradient-text">projects</span></h2>
+      <div class="projects-grid">
+        <article class="card project-card reveal">
+          <div class="project-thumb thumb-1" aria-hidden="true"></div>
+          <h3>Aurora Dashboard</h3>
+          <p>A real-time analytics dashboard with dark-mode charts and a fully responsive layout.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        </article>
+        <article class="card project-card reveal">
+          <div class="project-thumb thumb-2" aria-hidden="true"></div>
+          <h3>Nimbus Landing</h3>
+          <p>High-converting SaaS landing page with scroll animations and A/B-tested hero copy.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>Netlify</span></div>
+        </article>
+        <article class="card project-card reveal">
+          <div class="project-thumb thumb-3" aria-hidden="true"></div>
+          <h3>Terra Blog</h3>
+          <p>Minimal blog theme focused on readability, with a custom dark mode and RSS support.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2 class="section-title reveal">Let's <span class="gradient-text">connect</span></h2>
+      <div class="card contact-card reveal">
+        <p>Have a project in mind, or just want to say hi? My inbox is always open — I'll get back to you within a day.</p>
+        <a class="btn" href="mailto:hello@jordanlee.dev">hello@jordanlee.dev</a>
+        <div class="socials">
+          <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com" target="_blank" rel="noopener">X</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Jordan Lee. Built with HTML, CSS &amp; JavaScript — deployed on Netlify.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
