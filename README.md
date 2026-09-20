@@ -1,17 +1,21 @@
-# Sample Portfolio
+# Northline — Sample Finance Product Launch Page
 
-A stylish single-page sample portfolio built with plain HTML, CSS and JavaScript.
+A fictional fintech product launch page for **Northline**, a smart finance app concept. Built with plain HTML, CSS and JavaScript — no build step required.
 
 ## Run locally
 
-Open `index.html` in your browser — no build step needed.
+Open `index.html` in your browser.
 
 ## Deploy
 
-This repo is ready for static hosting. On Netlify it deploys automatically from the `main` branch (publish directory: root).
+Static site — deploys anywhere. Currently live via GitHub Pages (deploys automatically from the `main` branch).
 
-## Customizing
+## What's on the page
 
-- Edit the name, bio, projects and contact details in `index.html`.
-- Tweak colors and layout in `styles.css` (theme variables are at the top).
-- Small interactions live in `script.js`.
+- Hero with waitlist signup form (validated, with success state)
+- Animated product mockup, stats counters
+- Features grid, 3-step "how it works"
+- Pricing with monthly/yearly toggle
+- Testimonials, FAQ accordion, final CTA
+
+> Sample concept only — not a real financial product.

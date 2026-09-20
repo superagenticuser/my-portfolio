@@ -3,139 +3,257 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jordan Lee — Front-End Developer portfolio. Clean, modern web experiences built with HTML, CSS and JavaScript." />
-  <title>Jordan Lee — Front-End Developer</title>
+  <meta name="description" content="Northline — the smart finance app that budgets, saves and invests for you. Join the waitlist." />
+  <title>Northline — Money, minus the noise</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="bg-orbs" aria-hidden="true">
-    <span class="orb orb-1"></span>
-    <span class="orb orb-2"></span>
-    <span class="orb orb-3"></span>
+  <div class="bg-glow" aria-hidden="true">
+    <span class="glow glow-1"></span>
+    <span class="glow glow-2"></span>
   </div>
 
+  <!-- NAV -->
   <header class="nav">
-    <a class="logo" href="#top">JL<span class="logo-dot">.</span></a>
+    <a class="logo" href="#top">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <path d="M3 20 L10 12 L15 16 L23 5" stroke="url(#lg)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs><linearGradient id="lg" x1="3" y1="20" x2="23" y2="5"><stop stop-color="#34d399"/><stop offset="1" stop-color="#fbbf24"/></linearGradient></defs>
+      </svg>
+      Northline
+    </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <nav class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact" class="btn btn-sm">Contact</a>
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#waitlist" class="btn btn-sm">Get early access</a>
     </nav>
   </header>
 
   <main id="top">
     <!-- HERO -->
     <section class="hero">
-      <p class="hero-kicker reveal">Hello, I'm</p>
-      <h1 class="hero-title reveal">Jordan Lee<br /><span class="gradient-text">Front-End Developer</span></h1>
-      <p class="hero-sub reveal">I design and build fast, accessible, and delightful web experiences. Currently crafting interfaces and shipping pixels in Toronto.</p>
-      <div class="hero-actions reveal">
-        <a href="#projects" class="btn">View my work</a>
-        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="pill reveal">🚀 Launching early 2027 — join the waitlist</p>
+          <h1 class="reveal">Money, <span class="gradient-text">minus the noise.</span></h1>
+          <p class="hero-sub reveal">Northline is the finance app that budgets, saves, and invests for you — automatically. One dashboard for every dollar you own.</p>
+          <form class="waitlist-form reveal" id="waitlistForm" novalidate>
+            <input type="email" id="waitlistEmail" placeholder="you@example.com" aria-label="Email address" required />
+            <button type="submit" class="btn">Get early access</button>
+          </form>
+          <p class="form-note reveal" id="formNote">Free during beta · No credit card required</p>
+          <div class="hero-stats reveal">
+            <div class="stat"><strong><span class="counter" data-target="128">0</span>k</strong><span>waitlist signups</span></div>
+            <div class="stat"><strong><span class="counter" data-target="4.8">0</span>★</strong><span>beta rating</span></div>
+            <div class="stat"><strong>$<span class="counter" data-target="92">0</span>M</strong><span>managed in beta</span></div>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <p class="phone-label">Total balance</p>
+            <p class="phone-balance">$24,806.17</p>
+            <p class="phone-delta">▲ 12.4% this month</p>
+            <div class="phone-bars">
+              <span style="--h: 34%"></span><span style="--h: 52%"></span>
+              <span style="--h: 44%"></span><span style="--h: 68%"></span>
+              <span style="--h: 60%"></span><span style="--h: 82%"></span>
+              <span style="--h: 96%"></span>
+            </div>
+            <div class="phone-row"><span>Smart Save</span><strong>+$420</strong></div>
+            <div class="phone-row"><span>Auto Invest</span><strong>+$1,150</strong></div>
+            <div class="phone-cta">This week on autopilot →</div>
+          </div>
+        </div>
       </div>
-      <div class="hero-stats reveal">
-        <div class="stat"><strong>5+</strong><span>Years experience</span></div>
-        <div class="stat"><strong>40+</strong><span>Projects shipped</span></div>
-        <div class="stat"><strong>12</strong><span>Happy clients</span></div>
+      <div class="logos reveal">
+        <span>As featured in</span>
+        <div class="logo-row">
+          <strong>FINTECH&nbsp;DAILY</strong><strong>Moneywise</strong><strong>The Ledger</strong><strong>CAPITAL&nbsp;FM</strong><strong>Startup&nbsp;Wire</strong>
+        </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="section" id="about">
-      <h2 class="section-title reveal">About <span class="gradient-text">me</span></h2>
-      <div class="about-grid">
+    <!-- FEATURES -->
+    <section class="section" id="features">
+      <h2 class="section-title reveal">Everything your money should <span class="gradient-text">do for you</span></h2>
+      <p class="section-sub reveal">Six reasons 128,000 people are already on the waitlist.</p>
+      <div class="features-grid">
         <div class="card reveal">
-          <p>I'm a front-end developer who loves turning ideas into polished, performant websites. My sweet spot is the space between design and engineering — clean code, thoughtful motion, and interfaces that feel effortless.</p>
-          <p>When I'm not shipping, you'll find me sketching UI concepts, contributing to open source, or hunting down the perfect espresso.</p>
+          <div class="icon">🤖</div>
+          <h3>Autopilot budgeting</h3>
+          <p>Northline learns your habits and builds a budget that updates itself. No spreadsheets, no guilt trips.</p>
         </div>
         <div class="card reveal">
-          <h3>What I do</h3>
+          <div class="icon">📈</div>
+          <h3>Invest spare change</h3>
+          <p>Round-ups and scheduled buys flow into diversified portfolios. Start with $5 — seriously.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon">🏦</div>
+          <h3>4.20% APY vaults</h3>
+          <p>Park cash in high-yield vaults with zero lock-in. Withdraw anytime, earn every day.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon">🛡️</div>
+          <h3>Fraud shield</h3>
+          <p>Real-time transaction monitoring and instant freeze. Suspicious charge? We flag it in seconds.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon">💳</div>
+          <h3>One card, every account</h3>
+          <p>A single smart card that routes spending from the right account, automatically.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon">🌍</div>
+          <h3>Borderless by default</h3>
+          <p>Hold 30+ currencies and send money abroad at the real exchange rate. Zero hidden fees.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how">
+      <h2 class="section-title reveal">Live in <span class="gradient-text">three steps</span></h2>
+      <div class="steps">
+        <div class="card step reveal">
+          <span class="step-num">1</span>
+          <h3>Connect your accounts</h3>
+          <p>Link banks, cards, and brokerages in under two minutes with bank-grade encryption.</p>
+        </div>
+        <div class="card step reveal">
+          <span class="step-num">2</span>
+          <h3>Set your goals</h3>
+          <p>Emergency fund? Trip to Tokyo? Tell Northline what matters — it plans the route.</p>
+        </div>
+        <div class="card step reveal">
+          <span class="step-num">3</span>
+          <h3>Switch on autopilot</h3>
+          <p>Budgets, savings, and investments run themselves. You just watch the numbers grow.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section" id="pricing">
+      <h2 class="section-title reveal">Simple <span class="gradient-text">pricing</span></h2>
+      <p class="section-sub reveal">Start free. Upgrade when you're ready for more.</p>
+      <div class="billing-toggle reveal">
+        <button class="toggle-btn active" data-billing="monthly">Monthly</button>
+        <button class="toggle-btn" data-billing="yearly">Yearly <em>−20%</em></button>
+      </div>
+      <div class="pricing-grid">
+        <div class="card price-card reveal">
+          <h3>Starter</h3>
+          <p class="price"><span class="amount" data-monthly="$0" data-yearly="$0">$0</span><span class="per">/mo</span></p>
           <ul class="check-list">
-            <li>Responsive, mobile-first websites</li>
-            <li>Design systems &amp; component libraries</li>
-            <li>Performance &amp; accessibility audits</li>
-            <li>Landing pages that convert</li>
+            <li>Autopilot budgeting</li>
+            <li>1 savings vault</li>
+            <li>Basic insights</li>
           </ul>
+          <a href="#waitlist" class="btn btn-ghost btn-block">Join free</a>
+        </div>
+        <div class="card price-card featured reveal">
+          <span class="badge">Most popular</span>
+          <h3>Plus</h3>
+          <p class="price"><span class="amount" data-monthly="$9" data-yearly="$7">$9</span><span class="per">/mo</span></p>
+          <ul class="check-list">
+            <li>Everything in Starter</li>
+            <li>4.20% APY vaults</li>
+            <li>Auto-invest round-ups</li>
+            <li>Fraud shield</li>
+          </ul>
+          <a href="#waitlist" class="btn btn-block">Get early access</a>
+        </div>
+        <div class="card price-card reveal">
+          <h3>Pro</h3>
+          <p class="price"><span class="amount" data-monthly="$19" data-yearly="$15">$19</span><span class="per">/mo</span></p>
+          <ul class="check-list">
+            <li>Everything in Plus</li>
+            <li>Multi-currency accounts</li>
+            <li>Tax-smart reports</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#waitlist" class="btn btn-ghost btn-block">Join free</a>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section class="section" id="skills">
-      <h2 class="section-title reveal">Skills &amp; <span class="gradient-text">toolkit</span></h2>
-      <div class="skills-grid">
-        <div class="card skill-card reveal">
-          <h3>HTML</h3>
-          <div class="meter"><span style="--level: 95%"></span></div>
-          <p>Semantic, accessible markup</p>
+    <!-- TESTIMONIALS -->
+    <section class="section" id="testimonials">
+      <h2 class="section-title reveal">Loved by <span class="gradient-text">beta users</span></h2>
+      <div class="testimonials-grid">
+        <div class="card quote reveal">
+          <p>"I saved $3,200 in four months without thinking about it. Northline just… handles it."</p>
+          <footer>— Maya R., Product Designer</footer>
         </div>
-        <div class="card skill-card reveal">
-          <h3>CSS</h3>
-          <div class="meter"><span style="--level: 92%"></span></div>
-          <p>Grid, Flexbox, animations</p>
+        <div class="card quote reveal">
+          <p>"The first finance app I actually open every day. The autopilot budget is scary good."</p>
+          <footer>— Daniel K., Freelance Dev</footer>
         </div>
-        <div class="card skill-card reveal">
-          <h3>JavaScript</h3>
-          <div class="meter"><span style="--level: 88%"></span></div>
-          <p>ES6+, DOM, fetch APIs</p>
-        </div>
-        <div class="card skill-card reveal">
-          <h3>Tooling</h3>
-          <div class="meter"><span style="--level: 80%"></span></div>
-          <p>Git, Netlify, Figma, Vite</p>
+        <div class="card quote reveal">
+          <p>"Moved my emergency fund to a vault earning 4.2%. My old bank was paying me 0.01%. Enough said."</p>
+          <footer>— Priya S., Marketing Lead</footer>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section class="section" id="projects">
-      <h2 class="section-title reveal">Selected <span class="gradient-text">projects</span></h2>
-      <div class="projects-grid">
-        <article class="card project-card reveal">
-          <div class="project-thumb thumb-1" aria-hidden="true"></div>
-          <h3>Aurora Dashboard</h3>
-          <p>A real-time analytics dashboard with dark-mode charts and a fully responsive layout.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-        </article>
-        <article class="card project-card reveal">
-          <div class="project-thumb thumb-2" aria-hidden="true"></div>
-          <h3>Nimbus Landing</h3>
-          <p>High-converting SaaS landing page with scroll animations and A/B-tested hero copy.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>Netlify</span></div>
-        </article>
-        <article class="card project-card reveal">
-          <div class="project-thumb thumb-3" aria-hidden="true"></div>
-          <h3>Terra Blog</h3>
-          <p>Minimal blog theme focused on readability, with a custom dark mode and RSS support.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-        </article>
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <h2 class="section-title reveal">Questions, <span class="gradient-text">answered</span></h2>
+      <div class="faq-list">
+        <div class="card faq-item reveal">
+          <button class="faq-q">Is my money safe with Northline? <span class="faq-icon">+</span></button>
+          <p class="faq-a">Yes. Funds are held with partner banks and are FDIC-insured up to $250,000. We use 256-bit encryption and never sell your data.</p>
+        </div>
+        <div class="card faq-item reveal">
+          <button class="faq-q">When does Northline launch? <span class="faq-icon">+</span></button>
+          <p class="faq-a">We're rolling out invites through early 2027. Join the waitlist — earlier signups get earlier access and locked-in beta pricing.</p>
+        </div>
+        <div class="card faq-item reveal">
+          <button class="faq-q">Can I cancel anytime? <span class="faq-icon">+</span></button>
+          <p class="faq-a">Absolutely. No contracts, no cancellation fees. Export your data whenever you like — it's yours.</p>
+        </div>
+        <div class="card faq-item reveal">
+          <button class="faq-q">Which countries are supported? <span class="faq-icon">+</span></button>
+          <p class="faq-a">Launching in the US and Canada first, with the UK and EU to follow. Multi-currency accounts work worldwide from day one.</p>
+        </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <h2 class="section-title reveal">Let's <span class="gradient-text">connect</span></h2>
-      <div class="card contact-card reveal">
-        <p>Have a project in mind, or just want to say hi? My inbox is always open — I'll get back to you within a day.</p>
-        <a class="btn" href="mailto:hello@jordanlee.dev">hello@jordanlee.dev</a>
-        <div class="socials">
-          <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://x.com" target="_blank" rel="noopener">X</a>
-        </div>
+    <!-- FINAL CTA -->
+    <section class="section cta-section" id="waitlist">
+      <div class="card cta-card reveal">
+        <h2>Ready to put your money <span class="gradient-text">on autopilot?</span></h2>
+        <p>Join 128,000+ people on the waitlist. Free during beta.</p>
+        <form class="waitlist-form" id="waitlistForm2" novalidate>
+          <input type="email" id="waitlistEmail2" placeholder="you@example.com" aria-label="Email address" required />
+          <button type="submit" class="btn">Get early access</button>
+        </form>
+        <p class="form-note" id="formNote2">Free during beta · No credit card required</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2026 Jordan Lee. Built with HTML, CSS &amp; JavaScript — deployed on Netlify.</p>
+    <div class="footer-inner">
+      <a class="logo" href="#top">Northline</a>
+      <nav class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#waitlist">Waitlist</a>
+      </nav>
+    </div>
+    <p class="disclaimer">© 2026 Northline Labs. Sample concept page — not a real financial product. APY and features shown are illustrative.</p>
   </footer>
 
   <script src="script.js"></script>
