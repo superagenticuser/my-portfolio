@@ -116,3 +116,18 @@ document.querySelectorAll(".faq-item").forEach((item) => {
     }
   });
 });
+
+// ---------- Dark mode ----------
+const themeToggle = document.getElementById("themeToggle");
+const themeColorMeta = document.getElementById("themeColorMeta");
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
+  if (themeColorMeta) themeColorMeta.setAttribute("content", theme === "dark" ? "#090c16" : "#f6f7fb");
+  try { localStorage.setItem("northline-theme", theme); } catch (err) { /* private mode */ }
+}
+themeToggle.addEventListener("click", () => {
+  applyTheme(document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark");
+});
+// sync toggle state with the pre-paint theme chosen in <head>
+applyTheme(document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light");
