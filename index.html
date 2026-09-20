@@ -7,22 +7,18 @@
   <title>Northline — Money, minus the noise</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="bg-glow" aria-hidden="true">
-    <span class="glow glow-1"></span>
-    <span class="glow glow-2"></span>
-  </div>
-
   <!-- NAV -->
   <header class="nav">
     <a class="logo" href="#top">
-      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
-        <path d="M3 20 L10 12 L15 16 L23 5" stroke="url(#lg)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <defs><linearGradient id="lg" x1="3" y1="20" x2="23" y2="5"><stop stop-color="#34d399"/><stop offset="1" stop-color="#fbbf24"/></linearGradient></defs>
-      </svg>
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M3 18 L9 11 L13 14 L21 5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
       Northline
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -40,72 +36,86 @@
   <main id="top">
     <!-- HERO -->
     <section class="hero">
+      <div class="hero-mesh" aria-hidden="true"></div>
       <div class="hero-inner">
         <div class="hero-copy">
-          <p class="pill reveal">🚀 Launching early 2027 — join the waitlist</p>
-          <h1 class="reveal">Money, <span class="gradient-text">minus the noise.</span></h1>
-          <p class="hero-sub reveal">Northline is the finance app that budgets, saves, and invests for you — automatically. One dashboard for every dollar you own.</p>
+          <p class="pill reveal"><span class="pulse-dot"></span> Launching early 2027 — join the waitlist</p>
+          <h1 class="reveal">Money,<br /><span class="gradient-text">minus the noise.</span></h1>
+          <p class="hero-sub reveal">Northline is the finance app that budgets, saves, and invests for you — automatically. One calm dashboard for every dollar you own.</p>
           <form class="waitlist-form reveal" id="waitlistForm" novalidate>
             <input type="email" id="waitlistEmail" placeholder="you@example.com" aria-label="Email address" required />
             <button type="submit" class="btn">Get early access</button>
           </form>
           <p class="form-note reveal" id="formNote">Free during beta · No credit card required</p>
-          <div class="hero-stats reveal">
-            <div class="stat"><strong><span class="counter" data-target="128">0</span>k</strong><span>waitlist signups</span></div>
-            <div class="stat"><strong><span class="counter" data-target="4.8">0</span>★</strong><span>beta rating</span></div>
-            <div class="stat"><strong>$<span class="counter" data-target="92">0</span>M</strong><span>managed in beta</span></div>
-          </div>
         </div>
-        <div class="hero-visual reveal">
-          <div class="phone">
-            <div class="phone-notch"></div>
-            <p class="phone-label">Total balance</p>
-            <p class="phone-balance">$24,806.17</p>
-            <p class="phone-delta">▲ 12.4% this month</p>
-            <div class="phone-bars">
-              <span style="--h: 34%"></span><span style="--h: 52%"></span>
-              <span style="--h: 44%"></span><span style="--h: 68%"></span>
-              <span style="--h: 60%"></span><span style="--h: 82%"></span>
-              <span style="--h: 96%"></span>
-            </div>
-            <div class="phone-row"><span>Smart Save</span><strong>+$420</strong></div>
-            <div class="phone-row"><span>Auto Invest</span><strong>+$1,150</strong></div>
-            <div class="phone-cta">This week on autopilot →</div>
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="float-card fc-balance">
+            <p class="fc-label">Total balance</p>
+            <p class="fc-big">$24,806.17</p>
+            <p class="fc-delta">▲ 12.4% this month</p>
+          </div>
+          <div class="float-card fc-save">
+            <p class="fc-label">Smart Save</p>
+            <p class="fc-big">+$420 <span class="fc-sub">this week</span></p>
+            <div class="fc-progress"><span style="--w: 72%"></span></div>
+          </div>
+          <div class="float-card fc-invest">
+            <p class="fc-label">Auto Invest</p>
+            <svg class="spark" viewBox="0 0 120 40" fill="none">
+              <path d="M2 34 L20 28 L38 30 L56 20 L74 22 L92 10 L118 6" stroke="#4f46e5" stroke-width="3" stroke-linecap="round"/>
+              <path d="M2 34 L20 28 L38 30 L56 20 L74 22 L92 10 L118 6 V40 H2 Z" fill="url(#sparkfill)" opacity="0.35"/>
+              <defs><linearGradient id="sparkfill" x1="0" y1="0" x2="0" y2="40"><stop stop-color="#4f46e5"/><stop offset="1" stop-color="#4f46e5" stop-opacity="0"/></linearGradient></defs>
+            </svg>
+            <p class="fc-sub">+$1,150 this month</p>
+          </div>
+          <div class="float-card fc-alert">
+            <p class="fc-label">🛡️ Fraud shield</p>
+            <p class="fc-sub">Suspicious charge blocked</p>
           </div>
         </div>
       </div>
-      <div class="logos reveal">
-        <span>As featured in</span>
-        <div class="logo-row">
-          <strong>FINTECH&nbsp;DAILY</strong><strong>Moneywise</strong><strong>The Ledger</strong><strong>CAPITAL&nbsp;FM</strong><strong>Startup&nbsp;Wire</strong>
-        </div>
+      <div class="hero-stats reveal">
+        <div class="stat"><strong><span class="counter" data-target="128">0</span>k</strong><span>waitlist signups</span></div>
+        <div class="stat"><strong><span class="counter" data-target="4.8">0</span>★</strong><span>beta rating</span></div>
+        <div class="stat"><strong>$<span class="counter" data-target="92">0</span>M</strong><span>managed in beta</span></div>
       </div>
     </section>
 
-    <!-- FEATURES -->
+    <!-- LOGO MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>FINTECH DAILY</span><span>Moneywise</span><span>The Ledger</span><span>CAPITAL FM</span><span>Startup Wire</span><span>FINTECH DAILY</span><span>Moneywise</span><span>The Ledger</span><span>CAPITAL FM</span><span>Startup Wire</span>
+      </div>
+    </div>
+
+    <!-- FEATURES / BENTO -->
     <section class="section" id="features">
+      <p class="eyebrow reveal">Features</p>
       <h2 class="section-title reveal">Everything your money should <span class="gradient-text">do for you</span></h2>
       <p class="section-sub reveal">Six reasons 128,000 people are already on the waitlist.</p>
-      <div class="features-grid">
-        <div class="card reveal">
+      <div class="bento">
+        <div class="card bento-lg reveal">
           <div class="icon">🤖</div>
           <h3>Autopilot budgeting</h3>
-          <p>Northline learns your habits and builds a budget that updates itself. No spreadsheets, no guilt trips.</p>
+          <p>Northline learns your habits and builds a budget that updates itself. No spreadsheets, no guilt trips — just a plan that quietly works.</p>
+          <div class="mini-bars" aria-hidden="true">
+            <span style="--h: 40%"></span><span style="--h: 65%"></span><span style="--h: 50%"></span><span style="--h: 80%"></span><span style="--h: 62%"></span><span style="--h: 95%"></span>
+          </div>
         </div>
         <div class="card reveal">
           <div class="icon">📈</div>
           <h3>Invest spare change</h3>
-          <p>Round-ups and scheduled buys flow into diversified portfolios. Start with $5 — seriously.</p>
+          <p>Round-ups and scheduled buys flow into diversified portfolios. Start with $5.</p>
         </div>
         <div class="card reveal">
           <div class="icon">🏦</div>
           <h3>4.20% APY vaults</h3>
-          <p>Park cash in high-yield vaults with zero lock-in. Withdraw anytime, earn every day.</p>
+          <p>High-yield vaults with zero lock-in. Withdraw anytime, earn daily.</p>
         </div>
-        <div class="card reveal">
+        <div class="card bento-lg reveal">
           <div class="icon">🛡️</div>
           <h3>Fraud shield</h3>
-          <p>Real-time transaction monitoring and instant freeze. Suspicious charge? We flag it in seconds.</p>
+          <p>Real-time monitoring watches every transaction. Suspicious charge? We flag it in seconds and freeze the card before a cent moves.</p>
         </div>
         <div class="card reveal">
           <div class="icon">💳</div>
@@ -115,36 +125,26 @@
         <div class="card reveal">
           <div class="icon">🌍</div>
           <h3>Borderless by default</h3>
-          <p>Hold 30+ currencies and send money abroad at the real exchange rate. Zero hidden fees.</p>
+          <p>Hold 30+ currencies and send money abroad at the real exchange rate.</p>
         </div>
       </div>
     </section>
 
     <!-- HOW IT WORKS -->
     <section class="section" id="how">
+      <p class="eyebrow reveal">How it works</p>
       <h2 class="section-title reveal">Live in <span class="gradient-text">three steps</span></h2>
       <div class="steps">
-        <div class="card step reveal">
-          <span class="step-num">1</span>
-          <h3>Connect your accounts</h3>
-          <p>Link banks, cards, and brokerages in under two minutes with bank-grade encryption.</p>
-        </div>
-        <div class="card step reveal">
-          <span class="step-num">2</span>
-          <h3>Set your goals</h3>
-          <p>Emergency fund? Trip to Tokyo? Tell Northline what matters — it plans the route.</p>
-        </div>
-        <div class="card step reveal">
-          <span class="step-num">3</span>
-          <h3>Switch on autopilot</h3>
-          <p>Budgets, savings, and investments run themselves. You just watch the numbers grow.</p>
-        </div>
+        <div class="step reveal"><span class="step-num">01</span><h3>Connect your accounts</h3><p>Link banks, cards, and brokerages in under two minutes with bank-grade encryption.</p></div>
+        <div class="step reveal"><span class="step-num">02</span><h3>Set your goals</h3><p>Emergency fund? Trip to Tokyo? Tell Northline what matters — it plans the route.</p></div>
+        <div class="step reveal"><span class="step-num">03</span><h3>Switch on autopilot</h3><p>Budgets, savings, and investments run themselves. You watch the numbers grow.</p></div>
       </div>
     </section>
 
     <!-- PRICING -->
     <section class="section" id="pricing">
-      <h2 class="section-title reveal">Simple <span class="gradient-text">pricing</span></h2>
+      <p class="eyebrow reveal">Pricing</p>
+      <h2 class="section-title reveal">Simple, <span class="gradient-text">honest pricing</span></h2>
       <p class="section-sub reveal">Start free. Upgrade when you're ready for more.</p>
       <div class="billing-toggle reveal">
         <button class="toggle-btn active" data-billing="monthly">Monthly</button>
@@ -154,34 +154,20 @@
         <div class="card price-card reveal">
           <h3>Starter</h3>
           <p class="price"><span class="amount" data-monthly="$0" data-yearly="$0">$0</span><span class="per">/mo</span></p>
-          <ul class="check-list">
-            <li>Autopilot budgeting</li>
-            <li>1 savings vault</li>
-            <li>Basic insights</li>
-          </ul>
+          <ul class="check-list"><li>Autopilot budgeting</li><li>1 savings vault</li><li>Basic insights</li></ul>
           <a href="#waitlist" class="btn btn-ghost btn-block">Join free</a>
         </div>
         <div class="card price-card featured reveal">
           <span class="badge">Most popular</span>
           <h3>Plus</h3>
           <p class="price"><span class="amount" data-monthly="$9" data-yearly="$7">$9</span><span class="per">/mo</span></p>
-          <ul class="check-list">
-            <li>Everything in Starter</li>
-            <li>4.20% APY vaults</li>
-            <li>Auto-invest round-ups</li>
-            <li>Fraud shield</li>
-          </ul>
+          <ul class="check-list"><li>Everything in Starter</li><li>4.20% APY vaults</li><li>Auto-invest round-ups</li><li>Fraud shield</li></ul>
           <a href="#waitlist" class="btn btn-block">Get early access</a>
         </div>
         <div class="card price-card reveal">
           <h3>Pro</h3>
           <p class="price"><span class="amount" data-monthly="$19" data-yearly="$15">$19</span><span class="per">/mo</span></p>
-          <ul class="check-list">
-            <li>Everything in Plus</li>
-            <li>Multi-currency accounts</li>
-            <li>Tax-smart reports</li>
-            <li>Priority support</li>
-          </ul>
+          <ul class="check-list"><li>Everything in Plus</li><li>Multi-currency accounts</li><li>Tax-smart reports</li><li>Priority support</li></ul>
           <a href="#waitlist" class="btn btn-ghost btn-block">Join free</a>
         </div>
       </div>
@@ -189,30 +175,24 @@
 
     <!-- TESTIMONIALS -->
     <section class="section" id="testimonials">
+      <p class="eyebrow reveal">Wall of love</p>
       <h2 class="section-title reveal">Loved by <span class="gradient-text">beta users</span></h2>
-      <div class="testimonials-grid">
-        <div class="card quote reveal">
-          <p>"I saved $3,200 in four months without thinking about it. Northline just… handles it."</p>
-          <footer>— Maya R., Product Designer</footer>
-        </div>
-        <div class="card quote reveal">
-          <p>"The first finance app I actually open every day. The autopilot budget is scary good."</p>
-          <footer>— Daniel K., Freelance Dev</footer>
-        </div>
-        <div class="card quote reveal">
-          <p>"Moved my emergency fund to a vault earning 4.2%. My old bank was paying me 0.01%. Enough said."</p>
-          <footer>— Priya S., Marketing Lead</footer>
-        </div>
+      <div class="testi-scroll">
+        <div class="card quote reveal"><p>"I saved $3,200 in four months without thinking about it. Northline just… handles it."</p><footer><span class="avatar">MR</span> Maya R. · Product Designer</footer></div>
+        <div class="card quote reveal"><p>"The first finance app I actually open every day. The autopilot budget is scary good."</p><footer><span class="avatar">DK</span> Daniel K. · Freelance Dev</footer></div>
+        <div class="card quote reveal"><p>"Moved my emergency fund to a vault earning 4.2%. My old bank was paying 0.01%. Enough said."</p><footer><span class="avatar">PS</span> Priya S. · Marketing Lead</footer></div>
+        <div class="card quote reveal"><p>"Set it up on a Sunday, forgot about it, checked back to find $900 invested. Magic."</p><footer><span class="avatar">JT</span> Jordan T. · Student</footer></div>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section" id="faq">
+      <p class="eyebrow reveal">FAQ</p>
       <h2 class="section-title reveal">Questions, <span class="gradient-text">answered</span></h2>
       <div class="faq-list">
         <div class="card faq-item reveal">
           <button class="faq-q">Is my money safe with Northline? <span class="faq-icon">+</span></button>
-          <p class="faq-a">Yes. Funds are held with partner banks and are FDIC-insured up to $250,000. We use 256-bit encryption and never sell your data.</p>
+          <p class="faq-a">Funds are held with partner banks and are FDIC-insured up to $250,000. We use 256-bit encryption and never sell your data.</p>
         </div>
         <div class="card faq-item reveal">
           <button class="faq-q">When does Northline launch? <span class="faq-icon">+</span></button>
@@ -231,7 +211,8 @@
 
     <!-- FINAL CTA -->
     <section class="section cta-section" id="waitlist">
-      <div class="card cta-card reveal">
+      <div class="cta-dark reveal">
+        <div class="cta-mesh" aria-hidden="true"></div>
         <h2>Ready to put your money <span class="gradient-text">on autopilot?</span></h2>
         <p>Join 128,000+ people on the waitlist. Free during beta.</p>
         <form class="waitlist-form" id="waitlistForm2" novalidate>
@@ -245,12 +226,9 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <a class="logo" href="#top">Northline</a>
+      <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 18 L9 11 L13 14 L21 5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Northline</a>
       <nav class="footer-links">
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a href="#waitlist">Waitlist</a>
+        <a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#waitlist">Waitlist</a>
       </nav>
     </div>
     <p class="disclaimer">© 2026 Northline Labs. Sample concept page — not a real financial product. APY and features shown are illustrative.</p>
